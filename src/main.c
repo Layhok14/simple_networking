@@ -22,6 +22,15 @@ int main(){
     for(size_t i =0; i< get_val.size; ++i){
         printf("data %ld row: %s %s.\n", i, key2, get_val.arr[i]);
     }
+    int delete = kv_delete(db, key);
+    c_string_container get_update = kv_get(db,key);
+    for(size_t i =0; i< get_update.size; ++i){
+        printf("data %ld row: %s %s.\n", i, key, get_update.arr[i]);
+    }
+    printf("element count: %ld\n", db->count);
     // kv_free(db);
     return 0;
 }
+//TODO:
+//1. Check the logic of count 
+//2. check why the loop doesn't print.

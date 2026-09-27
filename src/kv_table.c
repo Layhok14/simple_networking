@@ -139,11 +139,11 @@ c_string_container kv_get(kv_table* table, char* key){
         char* entry_key = table->entry[real_index].key;
         char* entry_val = table->entry[real_index].val;
         if(entry_val&&strcmp(entry_key,key)==0){
-            printf("Adding...\n");
-            printf("size of result: %ld\n", result.size);
-            int add_result = add_element_to_c_string_container(&result, entry_val, strlen(entry_val));
-            // printf("adding result is: %d\n", add_result);
-            // printf("Result added: %s", result.arr[result.size-1]);
+        printf("Adding...\n");
+        printf("size of result: %ld\n", result.size);
+        int add_result = add_element_to_c_string_container(&result, entry_val, strlen(entry_val));
+        // printf("adding result is: %d\n", add_result);
+        // printf("Result added: %s", result.arr[result.size-1]);
         }
     }
     return result;
@@ -152,7 +152,28 @@ c_string_container kv_get(kv_table* table, char* key){
 //- table: pointer to the db.
 //- key: pointer to the key value to delete from the db.
 //returns: 0 if success and -1 otehrwise.
+//Note: For simplicity, the key given will delete all related values.
 
-int kv_delete(kv_table*,char* key){
-
+int kv_delete(kv_table* table,char* key){
+    size_t index = hash(key,table->capacity);
+    //replace the value with the value of TOMBSTONE
+    c_string_container get_val = kv_get(table,key);
+    if(get_val.size==0){
+        return -1;
+    }
+    for(size_t i = 0; i < get_val.size;i++){
+        size_t real_index = (index+i)%table->capacity;
+        kv_entry* entry = &table->entry[real_index];
+        char* entry_key = entry->key;
+        char* entry_val = entry->val;
+        if(strcmp(entry_key,key)==0){
+            if(entry_val){
+                free(entry_key); 
+                free(entry_val); 
+                entry_key = TOMBSTONE;  
+                entry_val = NULL;
+            }
+        }
+    } 
+    return 0;
 }

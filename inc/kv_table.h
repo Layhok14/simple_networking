@@ -17,4 +17,5 @@ void kv_free(kv_table* table);
 int kv_put(kv_table* table, char* key, char* val);
 c_string_container kv_get(kv_table* table,char* key);
 int kv_delete(kv_table*table, char* key);
+int kv_delete(kv_table* table,char* key);
 #endif
