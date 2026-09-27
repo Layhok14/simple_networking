@@ -8,4 +8,4 @@ clean:
 		rm -f obj/*.o
 		rm -rf bin/*
 build:
-	gcc -o $(TEST) -I./inc src/*.c -Wall
+	gcc -o $(TEST) -I./inc src/*.c -Wall -Wextra -ggdb -pedantic

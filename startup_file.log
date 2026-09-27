@@ -1,0 +1,857 @@
+--- Startup times for process: Primary (or UI client) ---
+
+times in msec
+ clock   self+sourced   self:  sourced script
+ clock   elapsed:              other lines
+
+000.006  000.006: --- NVIM STARTING ---
+000.423  000.417: event init
+000.719  000.296: early init
+002.079  001.360: locale set
+002.359  000.281: init first window
+003.971  001.612: inits 1
+004.002  000.031: window checked
+004.172  000.170: parsing arguments
+006.578  000.181  000.181: require('vim._core.shared')
+006.940  000.014  000.014: require('string.buffer')
+007.046  000.205  000.191: require('vim.inspect')
+007.262  000.182  000.182: require('vim._core.options')
+007.271  000.680  000.294: require('vim._core.editor')
+007.419  000.144  000.144: require('vim._core.system')
+007.424  001.114  000.109: require('vim._init_packages')
+007.430  002.144: init lua interpreter
+011.386  003.956: nvim_ui_attach
+012.528  001.142: nvim_set_client_info
+012.537  000.010: --- NVIM STARTED ---
+
+--- Startup times for process: Embedded ---
+
+times in msec
+ clock   self+sourced   self:  sourced script
+ clock   elapsed:              other lines
+
+000.005  000.005: --- NVIM STARTING ---
+000.292  000.287: event init
+000.538  000.246: early init
+001.239  000.701: locale set
+001.376  000.137: init first window
+002.582  001.206: inits 1
+002.615  000.033: window checked
+002.800  000.185: parsing arguments
+005.541  000.327  000.327: require('vim._core.shared')
+006.163  000.055  000.055: require('string.buffer')
+006.306  000.400  000.345: require('vim.inspect')
+006.610  000.262  000.262: require('vim._core.options')
+006.628  001.052  000.390: require('vim._core.editor')
+006.915  000.278  000.278: require('vim._core.system')
+006.923  001.825  000.168: require('vim._init_packages')
+006.930  002.305: init lua interpreter
+007.099  000.169: expanding arguments
+007.149  000.050: inits 2
+008.132  000.983: init highlight
+008.137  000.005: waiting for UI
+008.567  000.430: done waiting for UI
+008.582  000.015: clear screen
+009.168  000.054  000.054: require('vim.keymap')
+013.494  000.498  000.498: sourcing nvim_exec2()
+013.748  000.133  000.133: require('vim._core.log')
+018.584  009.992  009.308: require('vim._core.defaults')
+018.597  000.023: init default mappings & autocommands
+020.208  000.239  000.239: sourcing /opt/nvim-linux-x86_64/share/nvim/runtime/ftplugin.vim
+020.570  000.172  000.172: sourcing /opt/nvim-linux-x86_64/share/nvim/runtime/indent.vim
+024.326  002.412  002.412: require('lazy')
+024.433  000.056  000.056: require('ffi')
+024.721  000.156  000.156: require('vim.fs')
+025.246  000.502  000.502: require('vim.uri')
+025.351  000.903  000.246: require('vim.loader')
+026.674  001.226  001.226: require('lazy.stats')
+027.272  000.471  000.471: require('lazy.core.util')
+027.716  000.433  000.433: require('lazy.core.config')
+028.299  000.218  000.218: require('lazy.core.handler')
+029.414  000.370  000.370: require('lazy.pkg')
+029.436  000.842  000.472: require('lazy.core.meta')
+029.479  001.170  000.328: require('lazy.core.plugin')
+029.525  001.799  000.411: require('lazy.core.loader')
+032.559  000.330  000.330: require('lazy.core.fragments')
+037.626  000.510  000.510: require('lazyvim.util.deprecated')
+037.677  001.754  001.244: require('lazyvim.util')
+037.726  002.297  000.542: require('lazyvim.config')
+042.898  001.728  001.728: require('lazyvim.config.options')
+043.466  000.309  000.309: require('lazyvim.util.plugin')
+043.647  000.163  000.163: require('lazyvim.util.inject')
+043.859  000.196  000.196: require('lazy.core.handler.event')
+053.147  000.328  000.328: require('lazyvim.util.pick')
+061.838  000.198  000.198: require('lazy.core.handler.ft')
+062.134  000.276  000.276: require('lazy.core.handler.keys')
+062.315  000.164  000.164: require('lazy.core.handler.cmd')
+068.614  000.022  000.022: sourcing nvim_exec2() called at /home/annoy/.config/nvim/init.lua:0
+068.674  000.007  000.007: sourcing nvim_exec2() called at /home/annoy/.config/nvim/init.lua:0
+068.975  000.012  000.012: sourcing nvim_exec2() called at /home/annoy/.config/nvim/init.lua:0
+069.024  000.005  000.005: sourcing nvim_exec2() called at /home/annoy/.config/nvim/init.lua:0
+072.843  000.157  000.157: sourcing nvim_exec2() called at /opt/nvim-linux-x86_64/share/nvim/runtime/filetype.lua:0
+072.861  000.390  000.233: sourcing /opt/nvim-linux-x86_64/share/nvim/runtime/filetype.lua
+072.874  000.503  000.112: sourcing nvim_exec2() called at /home/annoy/.config/nvim/init.lua:0
+073.283  000.012  000.012: sourcing nvim_exec2() called at /home/annoy/.config/nvim/init.lua:0
+073.318  000.005  000.005: sourcing nvim_exec2() called at /home/annoy/.config/nvim/init.lua:0
+073.555  000.175  000.175: require('lazyvim')
+074.217  000.486  000.486: require('lazyvim.config.autocmds')
+076.639  000.015  000.015: sourcing nvim_exec2() called at /home/annoy/.config/nvim/init.lua:0
+076.677  000.005  000.005: sourcing nvim_exec2() called at /home/annoy/.config/nvim/init.lua:0
+078.547  000.260  000.260: require('tokyonight.config')
+078.564  001.796  001.536: require('tokyonight')
+078.783  003.957  002.141: require('tokyonight')
+079.054  000.251  000.251: require('tokyonight.theme')
+080.847  000.481  000.481: require('tokyonight.util')
+080.864  000.852  000.371: require('tokyonight.colors')
+081.878  000.361  000.361: require('tokyonight.hsluv')
+083.086  000.318  000.318: require('tokyonight.groups')
+090.845  001.158  001.158: require('snacks')
+090.860  001.341  000.183: sourcing /home/annoy/.local/share/nvim/lazy/snacks.nvim/plugin/snacks.lua
+090.876  001.442  000.100: sourcing nvim_exec2() called at /home/annoy/.config/nvim/init.lua:0
+090.911  000.011  000.011: sourcing nvim_exec2() called at /home/annoy/.config/nvim/init.lua:0
+090.963  000.006  000.006: sourcing nvim_exec2() called at /home/annoy/.config/nvim/init.lua:0
+094.283  000.910  000.910: sourcing /home/annoy/.local/share/nvim/lazy/telescope.nvim/plugin/telescope.lua
+094.307  001.016  000.106: sourcing nvim_exec2() called at /home/annoy/.config/nvim/init.lua:0
+094.340  000.011  000.011: sourcing nvim_exec2() called at /home/annoy/.config/nvim/init.lua:0
+094.400  000.006  000.006: sourcing nvim_exec2() called at /home/annoy/.config/nvim/init.lua:0
+094.447  000.005  000.005: sourcing nvim_exec2() called at /home/annoy/.config/nvim/init.lua:0
+094.477  000.004  000.004: sourcing nvim_exec2() called at /home/annoy/.config/nvim/init.lua:0
+098.262  000.263  000.263: require('telescope._extensions')
+098.289  000.560  000.297: require('telescope')
+104.245  000.093  000.093: sourcing /home/annoy/.local/share/nvim/lazy/plenary.nvim/plugin/plenary.vim
+104.270  000.210  000.117: sourcing nvim_exec2() called at /home/annoy/.config/nvim/init.lua:0
+104.301  000.009  000.009: sourcing nvim_exec2() called at /home/annoy/.config/nvim/init.lua:0
+104.354  000.005  000.005: sourcing nvim_exec2() called at /home/annoy/.config/nvim/init.lua:0
+107.453  000.262  000.262: require('plenary.bit')
+107.798  000.324  000.324: require('plenary.functional')
+107.910  003.222  002.636: require('plenary.path')
+107.966  007.922  004.476: require('plenary.strings')
+108.905  000.022  000.022: require('vim.F')
+108.997  000.463  000.441: require('plenary.log')
+109.341  001.085  000.622: require('telescope.log')
+110.105  000.159  000.159: require('plenary.compat')
+110.160  000.437  000.278: require('plenary.job')
+110.297  000.130  000.130: require('telescope.state')
+110.352  001.000  000.433: require('telescope.utils')
+110.374  002.401  000.315: require('telescope.sorters')
+115.677  016.633  006.310: require('telescope.config')
+116.128  000.181  000.181: require('plenary.window.border')
+116.276  000.136  000.136: require('plenary.window')
+116.400  000.114  000.114: require('plenary.popup.utils')
+116.417  000.722  000.291: require('plenary.popup')
+116.555  000.132  000.132: require('telescope.pickers.scroller')
+116.690  000.125  000.125: require('telescope.actions.state')
+116.826  000.126  000.126: require('telescope.actions.utils')
+117.207  000.214  000.214: require('telescope.actions.mt')
+117.265  000.430  000.216: require('telescope.actions.set')
+117.558  000.146  000.146: require('telescope.config.resolve')
+117.571  000.300  000.154: require('telescope.pickers.entry_display')
+117.685  000.109  000.109: require('telescope.from_entry')
+118.596  020.300  001.723: require('telescope.actions')
+120.016  000.128  000.128: require('plenary.tbl')
+120.053  000.308  000.180: require('plenary.vararg.rotate')
+120.061  000.516  000.208: require('plenary.vararg')
+120.206  000.140  000.140: require('plenary.errors')
+120.229  000.837  000.181: require('plenary.async.async')
+120.796  000.137  000.137: require('plenary.async.structs')
+120.822  000.317  000.180: require('plenary.async.control')
+120.847  000.486  000.169: require('plenary.async.util')
+120.855  000.619  000.133: require('plenary.async.tests')
+120.862  001.653  000.197: require('plenary.async')
+121.041  000.170  000.170: require('telescope.debounce')
+121.385  000.334  000.334: require('telescope.mappings')
+121.741  000.167  000.167: require('vim.hl')
+121.763  000.364  000.197: require('telescope.pickers.highlights')
+121.988  000.219  000.219: require('telescope.pickers.window')
+122.394  000.185  000.185: require('telescope.pickers.layout')
+122.751  000.173  000.173: require('telescope.algos.linked_list')
+122.768  000.363  000.190: require('telescope.entry_manager')
+122.908  000.135  000.135: require('telescope.pickers.multi')
+122.970  004.361  000.937: require('telescope.pickers')
+124.025  000.865  000.865: require('telescope.make_entry')
+124.475  000.437  000.437: require('telescope.finders.async_static_finder')
+125.176  000.210  000.210: require('plenary.class')
+125.238  000.549  000.339: require('telescope.async_job')
+125.248  000.761  000.212: require('telescope.finders.async_oneshot_finder')
+125.454  000.201  000.201: require('telescope.finders.async_job_finder')
+125.492  002.516  000.252: require('telescope.finders')
+125.911  000.210  000.210: require('telescope.previewers.previewer')
+127.449  000.517  000.517: require('telescope.previewers.utils')
+127.591  001.669  001.151: require('telescope.previewers.term_previewer')
+128.665  001.065  001.065: require('telescope.previewers.buffer_previewer')
+128.700  003.201  000.257: require('telescope.previewers')
+128.722  031.755  000.816: require('pdfreader.pickers')
+129.392  000.311  000.311: require('pdfreader.utils')
+131.247  000.581  000.581: require('snacks.util')
+131.333  001.656  001.075: require('snacks.image')
+131.349  001.945  000.289: require('pdfreader.image')
+131.736  000.165  000.165: require('pdfreader.pages.base')
+131.760  000.404  000.239: require('pdfreader.pages.image')
+131.951  000.184  000.184: require('pdfreader.pages.text')
+132.237  000.276  000.276: require('pdfreader.bookmarks')
+132.444  000.195  000.195: require('pdfreader.toc')
+132.477  003.748  000.433: require('pdfreader.book')
+132.679  000.194  000.194: require('pdfreader.validation')
+132.708  036.406  000.710: require('pdfreader.state')
+133.341  000.626  000.626: require('pdfreader.commands')
+133.366  038.874  001.843: require('pdfreader')
+133.855  000.019  000.019: sourcing nvim_exec2() called at /home/annoy/.config/nvim/init.lua:0
+133.931  000.006  000.006: sourcing nvim_exec2() called at /home/annoy/.config/nvim/init.lua:0
+138.605  003.584  003.584: require('wakatime')
+140.849  000.016  000.016: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+140.890  000.005  000.005: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+141.705  000.688  000.688: require('lualine_require')
+141.946  000.200  000.200: require('lazyvim.util.lualine')
+142.550  000.553  000.553: require('snacks.profiler')
+142.730  000.158  000.158: require('lazy.status')
+144.164  000.015  000.015: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+144.215  000.006  000.006: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+145.137  000.792  000.792: require('trouble')
+145.426  000.275  000.275: require('trouble.config')
+145.876  000.202  000.202: require('trouble.util')
+145.894  000.408  000.206: require('trouble.config.highlights')
+147.059  000.137  000.137: require('trouble.cache')
+147.256  000.184  000.184: require('trouble.format')
+147.398  000.132  000.132: require('trouble.view.indent')
+147.555  000.147  000.147: require('trouble.view.text')
+147.575  000.801  000.201: require('trouble.view.render')
+147.587  000.962  000.161: require('trouble.view.preview')
+147.596  001.148  000.186: require('trouble.view.main')
+147.732  004.973  002.329: require('trouble')
+148.134  000.236  000.236: require('trouble.config.actions')
+148.600  000.160  000.160: require('trouble.promise')
+148.888  000.128  000.128: require('trouble.filter')
+149.020  000.120  000.120: require('trouble.sort')
+149.167  000.138  000.138: require('trouble.sources')
+149.465  000.136  000.136: require('trouble.item')
+149.486  000.309  000.173: require('trouble.tree')
+149.499  000.888  000.194: require('trouble.view.section')
+149.638  000.135  000.135: require('trouble.spec')
+149.846  000.197  000.197: require('trouble.view.window')
+149.880  001.734  000.354: require('trouble.view')
+149.895  002.155  000.184: require('trouble.api')
+150.659  000.160  000.160: require('trouble.sources.diagnostics')
+151.757  001.054  001.054: require('vim.diagnostic')
+152.315  000.220  000.220: require('trouble.sources.fzf')
+154.142  001.574  001.574: require('trouble.sources.lsp')
+154.628  000.211  000.211: require('trouble.sources.qf')
+154.916  000.183  000.183: require('trouble.sources.snacks')
+155.178  000.160  000.160: require('trouble.sources.telescope')
+155.452  000.178  000.178: require('trouble.sources.profiler')
+159.605  001.982  001.982: require('vim.lsp.protocol')
+159.717  002.266  000.283: require('vim.lsp.log')
+160.491  000.038  000.038: require('vim._core.util')
+160.559  000.771  000.734: require('vim.lsp.util')
+161.011  000.180  000.180: require('vim.lsp.sync')
+161.034  000.466  000.286: require('vim.lsp._changetracking')
+161.506  000.203  000.203: require('vim.lsp._transport')
+161.537  000.019  000.019: require('vim._core.stringbuffer')
+161.720  000.677  000.455: require('vim.lsp.rpc')
+162.120  005.137  000.957: require('vim.lsp')
+162.699  000.530  000.530: require('vim.lsp.client')
+163.346  000.185  000.185: require('lualine.utils.utils')
+163.609  000.232  000.232: require('lualine.config')
+163.624  000.824  000.407: require('lualine')
+165.072  000.047  000.047: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+165.354  000.262  000.262: require('lualine.utils.loader')
+166.626  000.225  000.225: require('lualine.themes._tokyonight')
+168.326  000.452  000.452: require('lualine.highlight')
+169.461  001.067  001.067: require('lualine.utils.color_utils')
+169.527  000.029  000.029: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+169.600  000.014  000.014: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+169.639  000.011  000.011: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+169.690  000.012  000.012: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+169.725  000.009  000.009: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+169.765  000.009  000.009: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+169.801  000.008  000.008: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+169.831  000.008  000.008: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+169.873  000.009  000.009: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+169.908  000.008  000.008: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+170.005  000.050  000.050: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+170.097  000.012  000.012: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+170.143  000.010  000.010: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+170.180  000.008  000.008: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+170.218  000.008  000.008: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+170.259  000.010  000.010: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+170.290  000.008  000.008: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+170.439  000.040  000.040: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+171.029  000.260  000.260: require('lualine.utils.class')
+171.129  000.677  000.417: require('lualine.component')
+171.336  000.197  000.197: require('lualine.utils.fn_store')
+171.589  000.239  000.239: require('lualine.utils.nvim_opts')
+171.860  000.209  000.209: require('lualine.components.special.function_component')
+171.935  000.018  000.018: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+172.355  000.024  000.024: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+172.436  000.014  000.014: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+172.492  000.010  000.010: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+172.538  000.009  000.009: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+172.587  000.010  000.010: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+172.636  000.009  000.009: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+172.676  000.008  000.008: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+173.005  000.020  000.020: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+173.068  000.010  000.010: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+173.108  000.009  000.009: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+173.427  000.017  000.017: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+173.599  000.014  000.014: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+173.655  000.010  000.010: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+173.693  000.008  000.008: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+173.804  000.011  000.011: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+173.921  000.012  000.012: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+173.969  000.009  000.009: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+174.049  000.038  000.038: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+174.190  000.015  000.015: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+174.330  000.012  000.012: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+174.389  000.009  000.009: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+174.507  000.014  000.014: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+174.564  000.010  000.010: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+174.606  000.008  000.008: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+174.651  000.009  000.009: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+174.862  000.015  000.015: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+174.913  000.009  000.009: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+174.968  000.008  000.008: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+175.570  000.439  000.439: require('lualine.components.diff')
+175.960  000.025  000.025: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+176.009  000.010  000.010: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+176.055  000.009  000.009: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+176.098  000.009  000.009: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+176.135  000.009  000.009: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+176.267  000.015  000.015: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+176.308  000.008  000.008: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+176.383  000.013  000.013: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+176.417  000.008  000.008: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+176.458  000.008  000.008: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+176.495  000.008  000.008: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+176.635  000.011  000.011: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+176.766  000.012  000.012: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+176.864  000.011  000.011: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+176.926  000.012  000.012: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+177.033  000.013  000.013: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+177.153  000.013  000.013: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+177.190  000.009  000.009: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+177.227  000.009  000.009: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+177.287  000.011  000.011: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+177.325  000.008  000.008: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+177.663  000.318  000.318: require('lualine.components.diff.git_diff')
+178.133  000.278  000.278: require('lualine.components.progress')
+178.383  000.203  000.203: require('lualine.components.location')
+178.736  000.252  000.252: require('lualine.components.branch')
+179.105  000.347  000.347: require('lualine.components.branch.git_branch')
+179.455  000.027  000.027: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+179.495  000.018  000.018: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+179.642  000.018  000.018: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+179.704  000.012  000.012: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+179.760  000.009  000.009: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+179.813  000.010  000.010: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+179.856  000.008  000.008: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+179.911  000.009  000.009: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+180.017  000.013  000.013: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+180.900  000.302  000.302: require('lualine.components.diagnostics.sources')
+180.919  000.855  000.553: require('lualine.components.diagnostics')
+181.188  000.252  000.252: require('lualine.components.diagnostics.config')
+181.491  000.027  000.027: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+181.554  000.011  000.011: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+181.592  000.009  000.009: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+181.652  000.011  000.011: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+181.686  000.008  000.008: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+181.736  000.009  000.009: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+181.772  000.009  000.009: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+181.837  000.012  000.012: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+181.873  000.009  000.009: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+181.920  000.011  000.011: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+181.954  000.009  000.009: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+181.996  000.009  000.009: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+182.067  000.012  000.012: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+182.121  000.010  000.010: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+182.175  000.011  000.011: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+182.218  000.010  000.010: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+182.254  000.008  000.008: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+182.291  000.009  000.009: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+182.332  000.009  000.009: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+182.363  000.009  000.009: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+182.405  000.009  000.009: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+182.717  000.016  000.016: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+182.756  000.009  000.009: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+182.806  000.009  000.009: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+182.840  000.009  000.009: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+182.878  000.008  000.008: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+182.920  000.009  000.009: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+183.085  000.011  000.011: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+183.660  000.311  000.311: require('lualine.components.filetype')
+184.390  000.204  000.204: require('lualine.utils.mode')
+184.404  000.417  000.213: require('lualine.components.mode')
+184.803  000.335  000.335: require('lualine.components.filename')
+185.230  000.167  000.167: require('lualine.extensions.nerdtree')
+185.255  000.387  000.220: require('lualine.extensions.neo-tree')
+185.636  000.200  000.200: require('lualine.extensions.lazy')
+185.957  000.196  000.196: require('lualine.extensions.fzf')
+186.398  000.040  000.040: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+186.503  000.022  000.022: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+186.570  000.047  000.047: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+186.611  000.024  000.024: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+186.647  000.017  000.017: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+186.695  047.038  018.470: require('lualine')
+188.194  000.049  000.049: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+190.669  000.018  000.018: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+190.697  000.007  000.007: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+190.712  000.005  000.005: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+190.724  000.004  000.004: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+190.801  000.007  000.007: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+190.815  000.005  000.005: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+190.826  000.004  000.004: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+190.846  000.004  000.004: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+190.857  000.004  000.004: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+190.867  000.004  000.004: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+190.883  000.004  000.004: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+190.895  000.004  000.004: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+190.906  000.004  000.004: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+190.916  000.004  000.004: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+190.928  000.006  000.006: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+190.940  000.004  000.004: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+190.952  000.004  000.004: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+190.961  000.004  000.004: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+190.971  000.004  000.004: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+190.981  000.004  000.004: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+190.995  000.004  000.004: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+191.007  000.004  000.004: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+191.065  000.008  000.008: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+191.078  000.004  000.004: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+191.088  000.004  000.004: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+191.106  000.005  000.005: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+191.121  000.004  000.004: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+191.134  000.005  000.005: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+191.144  000.004  000.004: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+191.154  000.004  000.004: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+191.165  000.004  000.004: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+191.175  000.004  000.004: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+191.187  000.004  000.004: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+191.198  000.004  000.004: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+191.207  000.004  000.004: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+191.219  000.005  000.005: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+191.229  000.004  000.004: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+191.244  000.004  000.004: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+191.255  000.003  000.003: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+191.265  000.004  000.004: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+191.275  000.004  000.004: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+191.285  000.004  000.004: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+191.295  000.004  000.004: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+191.311  000.003  000.003: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+191.328  000.004  000.004: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+191.339  000.004  000.004: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+191.349  000.004  000.004: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+191.359  000.004  000.004: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+191.369  000.004  000.004: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+191.383  000.004  000.004: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+191.394  000.004  000.004: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+191.404  000.004  000.004: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+191.414  000.004  000.004: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+191.424  000.004  000.004: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+191.438  000.004  000.004: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+191.450  000.005  000.005: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+191.461  000.005  000.005: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+191.471  000.003  000.003: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+191.482  000.004  000.004: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+191.492  000.004  000.004: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+191.507  000.004  000.004: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+191.518  000.004  000.004: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+191.528  000.003  000.003: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+191.545  000.004  000.004: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+191.555  000.004  000.004: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+191.569  000.004  000.004: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+191.579  000.003  000.003: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+191.590  000.004  000.004: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+191.600  000.004  000.004: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+191.611  000.004  000.004: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+191.623  000.003  000.003: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+191.634  000.004  000.004: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+191.645  000.004  000.004: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+191.655  000.004  000.004: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+191.665  000.004  000.004: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+191.675  000.004  000.004: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+191.691  000.004  000.004: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+191.703  000.004  000.004: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+191.713  000.004  000.004: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+191.723  000.004  000.004: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+191.734  000.004  000.004: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+191.753  000.005  000.005: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+191.765  000.004  000.004: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+191.776  000.004  000.004: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+191.786  000.004  000.004: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+191.819  000.006  000.006: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+191.835  000.004  000.004: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+191.846  000.004  000.004: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+191.856  000.004  000.004: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+191.866  000.004  000.004: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+191.876  000.004  000.004: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+191.892  000.005  000.005: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+191.903  000.004  000.004: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+191.914  000.004  000.004: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+191.924  000.003  000.003: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+191.935  000.004  000.004: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+191.945  000.004  000.004: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+191.959  000.004  000.004: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+191.970  000.004  000.004: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+191.988  000.005  000.005: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+191.999  000.004  000.004: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+192.009  000.004  000.004: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+192.025  000.004  000.004: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+192.038  000.005  000.005: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+192.048  000.004  000.004: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+192.058  000.003  000.003: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+192.069  000.004  000.004: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+192.079  000.004  000.004: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+192.092  000.004  000.004: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+192.103  000.003  000.003: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+192.112  000.003  000.003: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+192.123  000.004  000.004: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+192.132  000.004  000.004: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+192.145  000.004  000.004: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+192.203  000.012  000.012: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+192.260  000.009  000.009: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+192.789  000.017  000.017: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+192.910  000.013  000.013: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+192.955  000.009  000.009: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+192.983  000.008  000.008: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+193.020  000.007  000.007: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+193.055  000.008  000.008: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+193.083  000.007  000.007: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+193.120  000.008  000.008: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+193.271  000.012  000.012: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+193.302  000.007  000.007: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+193.331  000.007  000.007: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+193.383  000.008  000.008: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+193.417  000.007  000.007: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+193.453  000.008  000.008: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+193.478  000.006  000.006: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+193.535  000.034  000.034: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+193.878  000.014  000.014: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+194.003  000.012  000.012: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+194.081  000.010  000.010: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+194.138  000.009  000.009: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+194.193  000.009  000.009: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+194.531  000.016  000.016: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+194.700  000.011  000.011: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+194.850  000.012  000.012: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+194.967  000.011  000.011: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+195.021  000.008  000.008: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+195.060  000.007  000.007: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+195.105  000.008  000.008: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+195.139  000.007  000.007: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+195.185  000.008  000.008: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+195.224  000.007  000.007: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+195.625  000.016  000.016: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+195.743  000.012  000.012: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+195.793  000.008  000.008: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+195.840  000.008  000.008: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+195.883  000.008  000.008: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+195.920  000.008  000.008: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+195.965  000.008  000.008: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+196.126  000.014  000.014: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+196.170  000.009  000.009: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+196.215  000.009  000.009: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+196.254  000.008  000.008: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+196.300  000.008  000.008: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+196.345  000.009  000.009: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+196.717  000.343  000.343: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+197.184  000.017  000.017: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+197.230  000.008  000.008: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+197.260  000.007  000.007: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+197.299  000.008  000.008: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+197.331  000.007  000.007: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+197.366  000.008  000.008: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+197.398  000.007  000.007: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+197.447  000.008  000.008: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+197.479  000.007  000.007: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+197.506  000.007  000.007: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+197.542  000.008  000.008: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+197.569  000.007  000.007: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+197.617  000.008  000.008: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+197.652  000.007  000.007: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+197.693  000.008  000.008: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+197.728  000.007  000.007: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+197.756  000.007  000.007: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+197.819  000.010  000.010: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+197.852  000.007  000.007: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+197.880  000.007  000.007: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+197.915  000.007  000.007: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+198.160  000.021  000.021: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+198.196  000.018  000.018: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+198.545  000.020  000.020: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+198.719  000.013  000.013: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+198.837  000.014  000.014: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+198.899  000.010  000.010: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+199.074  000.015  000.015: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+199.117  000.009  000.009: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+199.283  000.012  000.012: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+199.897  000.019  000.019: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+199.955  000.010  000.010: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+199.992  000.007  000.007: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+200.031  000.008  000.008: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+200.060  000.007  000.007: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+200.091  000.007  000.007: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+200.279  000.013  000.013: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+200.335  000.008  000.008: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+200.377  000.009  000.009: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+200.408  000.007  000.007: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+200.443  000.008  000.008: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+200.474  000.007  000.007: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+200.514  000.008  000.008: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+200.545  000.007  000.007: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+200.594  000.008  000.008: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+200.625  000.007  000.007: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+200.654  000.007  000.007: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+200.691  000.008  000.008: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+200.719  000.007  000.007: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+200.744  000.007  000.007: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+200.834  000.012  000.012: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+200.993  000.011  000.011: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+201.026  000.007  000.007: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+201.057  000.007  000.007: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+201.098  000.008  000.008: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+201.127  000.007  000.007: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+201.162  000.007  000.007: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+201.195  000.007  000.007: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+202.237  000.074  000.074: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+202.305  000.021  000.021: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+202.383  000.050  000.050: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+202.422  000.022  000.022: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+202.450  000.015  000.015: sourcing nvim_exec2() called at /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim:34
+205.205  070.356  017.688: sourcing /home/annoy/.local/share/nvim/lazy/vim-wakatime/plugin/wakatime.vim
+205.261  070.495  000.138: sourcing nvim_exec2() called at /home/annoy/.config/nvim/init.lua:0
+205.340  000.017  000.017: sourcing nvim_exec2() called at /home/annoy/.config/nvim/init.lua:0
+205.426  000.007  000.007: sourcing nvim_exec2() called at /home/annoy/.config/nvim/init.lua:0
+206.934  000.472  000.472: sourcing /home/annoy/.local/share/nvim/lazy/opencode.nvim/plugin/events/permissions/edits.lua
+206.958  000.605  000.133: sourcing nvim_exec2() called at /home/annoy/.config/nvim/init.lua:0
+207.437  000.339  000.339: sourcing /home/annoy/.local/share/nvim/lazy/opencode.nvim/plugin/events/permissions/init.lua
+207.458  000.455  000.115: sourcing nvim_exec2() called at /home/annoy/.config/nvim/init.lua:0
+208.402  000.595  000.595: sourcing /home/annoy/.local/share/nvim/lazy/opencode.nvim/plugin/events/reload.lua
+208.424  000.734  000.138: sourcing nvim_exec2() called at /home/annoy/.config/nvim/init.lua:0
+209.114  000.432  000.432: sourcing /home/annoy/.local/share/nvim/lazy/opencode.nvim/plugin/events/status.lua
+209.135  000.565  000.132: sourcing nvim_exec2() called at /home/annoy/.config/nvim/init.lua:0
+209.687  000.365  000.365: sourcing /home/annoy/.local/share/nvim/lazy/opencode.nvim/plugin/highlights.lua
+209.713  000.489  000.125: sourcing nvim_exec2() called at /home/annoy/.config/nvim/init.lua:0
+209.774  000.012  000.012: sourcing nvim_exec2() called at /home/annoy/.config/nvim/init.lua:0
+209.947  000.010  000.010: sourcing nvim_exec2() called at /home/annoy/.config/nvim/init.lua:0
+214.818  000.653  000.653: require('vimtex.utils.picker')
+214.843  002.804  002.151: require('vimtex.snacks')
+218.009  003.157  003.157: require('snacks.picker')
+223.474  005.194  005.194: require('snacks.picker.config.sources')
+223.518  011.748  000.593: sourcing /home/annoy/.local/share/nvim/lazy/vimtex/plugin/vimtex.vim
+223.539  011.890  000.142: sourcing nvim_exec2() called at /home/annoy/.config/nvim/init.lua:0
+223.580  000.011  000.011: sourcing nvim_exec2() called at /home/annoy/.config/nvim/init.lua:0
+223.963  000.085  000.085: sourcing /home/annoy/.local/share/nvim/lazy/vimtex/ftdetect/cls.vim
+223.980  000.189  000.104: sourcing nvim_exec2() called at /home/annoy/.config/nvim/init.lua:0
+224.198  000.061  000.061: sourcing /home/annoy/.local/share/nvim/lazy/vimtex/ftdetect/tex.vim
+224.212  000.151  000.090: sourcing nvim_exec2() called at /home/annoy/.config/nvim/init.lua:0
+224.415  000.054  000.054: sourcing /home/annoy/.local/share/nvim/lazy/vimtex/ftdetect/tikz.vim
+224.429  000.136  000.083: sourcing nvim_exec2() called at /home/annoy/.config/nvim/init.lua:0
+224.450  000.006  000.006: sourcing nvim_exec2() called at /home/annoy/.config/nvim/init.lua:0
+225.769  000.418  000.418: sourcing /opt/nvim-linux-x86_64/share/nvim/runtime/plugin/editorconfig.lua
+225.791  000.525  000.107: sourcing nvim_exec2() called at /home/annoy/.config/nvim/init.lua:0
+226.349  000.444  000.444: sourcing /opt/nvim-linux-x86_64/share/nvim/runtime/plugin/man.lua
+226.369  000.538  000.094: sourcing nvim_exec2() called at /home/annoy/.config/nvim/init.lua:0
+228.125  000.607  000.607: sourcing /opt/nvim-linux-x86_64/share/nvim/runtime/pack/dist/opt/matchit/plugin/matchit.vim
+228.210  001.725  001.118: sourcing /opt/nvim-linux-x86_64/share/nvim/runtime/plugin/matchit.vim
+228.223  001.809  000.084: sourcing nvim_exec2() called at /home/annoy/.config/nvim/init.lua:0
+228.824  000.473  000.473: sourcing /opt/nvim-linux-x86_64/share/nvim/runtime/plugin/matchparen.vim
+228.841  000.559  000.086: sourcing nvim_exec2() called at /home/annoy/.config/nvim/init.lua:0
+229.634  000.668  000.668: sourcing /opt/nvim-linux-x86_64/share/nvim/runtime/plugin/net.lua
+229.652  000.771  000.103: sourcing nvim_exec2() called at /home/annoy/.config/nvim/init.lua:0
+231.508  000.752  000.752: sourcing /opt/nvim-linux-x86_64/share/nvim/runtime/pack/dist/opt/netrw/plugin/netrwPlugin.vim
+231.644  001.868  001.117: sourcing /opt/nvim-linux-x86_64/share/nvim/runtime/plugin/netrwPlugin.vim
+231.659  001.962  000.094: sourcing nvim_exec2() called at /home/annoy/.config/nvim/init.lua:0
+232.224  000.410  000.410: sourcing /opt/nvim-linux-x86_64/share/nvim/runtime/plugin/osc52.lua
+232.244  000.534  000.124: sourcing nvim_exec2() called at /home/annoy/.config/nvim/init.lua:0
+232.889  000.471  000.471: sourcing /opt/nvim-linux-x86_64/share/nvim/runtime/plugin/rplugin.vim
+232.906  000.571  000.100: sourcing nvim_exec2() called at /home/annoy/.config/nvim/init.lua:0
+233.424  000.329  000.329: sourcing /opt/nvim-linux-x86_64/share/nvim/runtime/plugin/shada.lua
+233.444  000.453  000.124: sourcing nvim_exec2() called at /home/annoy/.config/nvim/init.lua:0
+233.731  000.153  000.153: sourcing /opt/nvim-linux-x86_64/share/nvim/runtime/plugin/spellfile.lua
+233.748  000.279  000.126: sourcing nvim_exec2() called at /home/annoy/.config/nvim/init.lua:0
+234.231  213.066  057.636: require('user.lazy')
+235.030  000.226  000.226: sourcing /opt/nvim-linux-x86_64/share/nvim/runtime/syntax/synload.vim
+235.334  000.835  000.610: sourcing /opt/nvim-linux-x86_64/share/nvim/runtime/syntax/syntax.vim
+235.352  000.980  000.144: sourcing nvim_exec2() called at /home/annoy/.config/nvim/init.lua:0
+235.887  000.145  000.145: sourcing /opt/nvim-linux-x86_64/share/nvim/runtime/filetype.lua
+236.271  000.039  000.039: sourcing /opt/nvim-linux-x86_64/share/nvim/runtime/ftplugin.vim
+236.565  000.026  000.026: sourcing /opt/nvim-linux-x86_64/share/nvim/runtime/indent.vim
+236.636  001.268  001.058: sourcing nvim_exec2() called at /home/annoy/.config/nvim/init.lua:0
+236.846  000.160  000.160: require('user.options')
+236.948  216.089  000.615: sourcing /home/annoy/.config/nvim/init.lua
+236.989  001.891: sourcing vimrc file(s)
+237.024  000.035: inits 3
+243.814  006.790: reading ShaDa
+244.970  000.017  000.017: sourcing nvim_exec2() called at BufReadPre Autocommands for "*":0
+245.014  000.005  000.005: sourcing nvim_exec2() called at BufReadPre Autocommands for "*":0
+246.710  000.164  000.164: require('persistence.config')
+246.738  001.192  001.027: require('persistence')
+247.842  000.014  000.014: sourcing nvim_exec2() called at BufReadPre Autocommands for "*":0
+247.916  000.006  000.006: sourcing nvim_exec2() called at BufReadPre Autocommands for "*":0
+249.780  000.136  000.136: require('mason-core.path')
+250.349  000.121  000.121: require('mason-core.functional.data')
+250.579  000.164  000.164: require('mason-core.functional.function')
+250.969  000.363  000.363: require('mason-core.functional.list')
+251.158  000.151  000.151: require('mason-core.functional.relation')
+251.312  000.136  000.136: require('mason-core.functional.logic')
+251.454  000.126  000.126: require('mason-core.functional.number')
+251.623  000.144  000.144: require('mason-core.functional.string')
+251.892  000.156  000.156: require('mason-core.functional.table')
+252.040  000.127  000.127: require('mason-core.functional.type')
+252.055  002.068  000.580: require('mason-core.functional')
+252.169  002.375  000.307: require('mason-core.platform')
+252.530  000.353  000.353: require('mason.settings')
+252.555  003.076  000.212: require('mason-core.installer.InstallLocation')
+253.321  000.445  000.445: require('mason-core.log')
+253.337  000.584  000.139: require('mason-core.EventEmitter')
+253.591  000.245  000.245: require('mason-registry.sources')
+253.756  001.194  000.365: require('mason-registry')
+253.768  005.722  001.452: require('mason')
+254.316  000.361  000.361: require('mason.api.command')
+254.581  000.226  000.226: require('mason-core.async')
+254.960  000.128  000.128: require('mason-core.async.uv')
+254.992  000.400  000.271: require('mason-core.fs')
+255.440  000.150  000.150: require('mason-core.result')
+256.091  000.361  000.361: require('mason-core.process')
+256.311  000.208  000.208: require('mason-core.spawn')
+256.329  000.729  000.159: require('mason-core.installer.managers.powershell')
+256.455  000.119  000.119: require('mason.version')
+256.470  001.019  000.171: require('mason-core.fetch')
+256.601  000.124  000.124: require('mason-core.providers')
+256.862  000.129  000.129: require('mason-core.optional')
+257.544  000.353  000.353: require('mason-core.purl')
+257.723  000.165  000.165: require('mason-core.async.control')
+257.751  000.717  000.198: require('mason-core.package.AbstractPackage')
+258.511  000.166  000.166: require('mason-core.installer.compiler.expr')
+258.541  000.388  000.222: require('mason-core.installer.compiler.link')
+259.529  000.136  000.136: require('mason-core.installer.context.InstallContextCwd')
+259.679  000.138  000.138: require('mason-core.installer.context.InstallContextFs')
+259.812  000.123  000.123: require('mason-core.installer.context.InstallContextSpawn')
+259.981  000.155  000.155: require('mason-core.receipt')
+260.053  000.943  000.392: require('mason-core.installer.context')
+260.060  001.192  000.248: require('mason-core.installer')
+260.107  001.422  000.230: require('mason-core.installer.managers.std')
+260.115  001.568  000.147: require('mason-core.installer.compiler.schemas')
+260.262  000.142  000.142: require('mason-core.installer.compiler.util')
+260.295  002.352  000.254: require('mason-core.installer.compiler')
+260.470  000.169  000.169: require('mason-core.installer.linker')
+260.489  002.732  000.211: require('mason-core.installer.InstallRunner')
+260.636  000.140  000.140: require('mason-core.installer.UninstallRunner')
+260.660  003.788  000.199: require('mason-core.package')
+260.670  004.059  000.141: require('mason-registry.sources.util')
+260.703  005.582  000.230: require('mason-registry.sources.github')
+261.418  000.171  000.171: require('mason-registry.sources.synthesized')
+308.396  000.136  000.136: sourcing /home/annoy/.local/share/nvim/lazy/nvim-lspconfig/plugin/lspconfig.lua
+308.410  000.203  000.067: sourcing nvim_exec2() called at BufReadPre Autocommands for "*":0
+308.432  000.005  000.005: sourcing nvim_exec2() called at BufReadPre Autocommands for "*":0
+308.482  000.003  000.003: sourcing nvim_exec2() called at BufReadPre Autocommands for "*":0
+308.929  000.408  000.408: require('vim.lsp.buf')
+309.262  000.121  000.121: require('vim.lsp._capability')
+309.288  000.330  000.209: require('vim.lsp.codelens')
+309.407  000.108  000.108: require('lazyvim.util.lsp')
+313.235  000.119  000.119: require('snacks.bigfile')
+319.100  005.840  005.840: require('vim.filetype')
+321.313  000.382  000.382: require('gitsigns')
+321.748  000.082  000.082: require('gitsigns.debug.log')
+321.865  000.111  000.111: require('gitsigns.config')
+322.393  001.030  000.837: require('gitsigns.highlight')
+322.609  000.079  000.079: require('gitsigns.async')
+322.839  000.158  000.158: require('gitsigns.util')
+322.848  000.234  000.077: require('gitsigns.hunks')
+322.967  000.045  000.045: require('gitsigns.diff')
+323.014  000.043  000.043: require('gitsigns.debounce')
+323.079  000.061  000.061: require('gitsigns.cache')
+323.091  000.241  000.091: require('gitsigns.manager')
+323.137  000.044  000.044: require('gitsigns.message')
+323.181  000.040  000.040: require('gitsigns.repeat')
+323.212  000.791  000.154: require('gitsigns.actions')
+323.323  000.043  000.043: require('gitsigns.status')
+323.549  000.042  000.042: require('gitsigns.system')
+323.554  000.091  000.049: require('gitsigns.git.cmd')
+323.602  000.045  000.045: require('gitsigns.git.errors')
+323.667  000.062  000.062: require('gitsigns.git.repo.watcher')
+323.717  000.046  000.046: require('gitsigns.git.version')
+323.736  000.354  000.110: require('gitsigns.git.repo')
+323.743  000.417  000.063: require('gitsigns.git')
+323.766  000.551  000.091: require('gitsigns.attach')
+325.352  004.465  001.710: sourcing /home/annoy/.local/share/nvim/lazy/gitsigns.nvim/plugin/gitsigns.lua
+325.371  004.520  000.055: sourcing nvim_exec2() called at BufReadPost Autocommands for "*":0
+325.396  000.007  000.007: sourcing nvim_exec2() called at BufReadPost Autocommands for "*":0
+325.457  000.003  000.003: sourcing nvim_exec2() called at BufReadPost Autocommands for "*":0
+325.715  000.206  000.206: require('snacks.toggle')
+326.104  000.131  000.131: require('snacks.keymap')
+327.167  000.062  000.062: require('vim.treesitter.language')
+327.222  000.048  000.048: require('vim.func')
+327.289  000.063  000.063: require('vim.treesitter._range')
+327.352  000.056  000.056: require('vim.func._memoize')
+327.391  000.406  000.177: require('vim.treesitter.query')
+327.448  000.605  000.199: require('vim.treesitter.languagetree')
+327.459  000.730  000.125: require('vim.treesitter')
+327.596  000.987  000.257: sourcing /home/annoy/.local/share/nvim/lazy/nvim-treesitter/plugin/filetypes.lua
+327.602  001.045  000.058: sourcing nvim_exec2() called at BufReadPost Autocommands for "*":0
+327.743  000.092  000.092: sourcing /home/annoy/.local/share/nvim/lazy/nvim-treesitter/plugin/nvim-treesitter.lua
+327.749  000.136  000.044: sourcing nvim_exec2() called at BufReadPost Autocommands for "*":0
+327.839  000.046  000.046: sourcing /home/annoy/.local/share/nvim/lazy/nvim-treesitter/plugin/query_predicates.lua
+327.844  000.086  000.040: sourcing nvim_exec2() called at BufReadPost Autocommands for "*":0
+327.853  000.003  000.003: sourcing nvim_exec2() called at BufReadPost Autocommands for "*":0
+327.869  000.002  000.002: sourcing nvim_exec2() called at BufReadPost Autocommands for "*":0
+328.317  000.314  000.314: require('nvim-treesitter')
+328.511  000.091  000.091: require('nvim-treesitter.async')
+328.587  000.072  000.072: require('nvim-treesitter.config')
+328.656  000.065  000.065: require('nvim-treesitter.log')
+329.183  000.523  000.523: require('nvim-treesitter.parsers')
+329.244  000.056  000.056: require('nvim-treesitter.util')
+329.260  000.938  000.131: require('nvim-treesitter.install')
+329.345  000.072  000.072: require('lazyvim.util.treesitter')
+329.821  000.005  000.005: sourcing nvim_exec2() called at BufReadPost Autocommands for "*":0
+329.837  000.002  000.002: sourcing nvim_exec2() called at BufReadPost Autocommands for "*":0
+330.233  000.377  000.377: require('lint')
+330.923  000.049  000.049: require('nvim-ts-autotag._log')
+330.984  000.056  000.056: require('nvim-ts-autotag.config.init')
+331.180  000.061  000.061: require('nvim-ts-autotag.utils')
+331.187  000.115  000.054: require('nvim-ts-autotag.config.ft')
+331.192  000.204  000.088: require('nvim-ts-autotag.config.plugin')
+331.201  000.423  000.114: require('nvim-ts-autotag.internal')
+331.204  000.743  000.320: require('nvim-ts-autotag')
+331.207  000.790  000.047: sourcing /home/annoy/.local/share/nvim/lazy/nvim-ts-autotag/plugin/nvim-ts-autotag.lua
+331.238  000.856  000.066: sourcing nvim_exec2() called at BufReadPost Autocommands for "*":0
+331.250  000.004  000.004: sourcing nvim_exec2() called at BufReadPost Autocommands for "*":0
+331.265  000.002  000.002: sourcing nvim_exec2() called at BufReadPost Autocommands for "*":0
+332.375  000.029  000.029: sourcing /home/annoy/.local/share/nvim/lazy/todo-comments.nvim/plugin/todo.vim
+332.382  000.072  000.044: sourcing nvim_exec2() called at BufReadPost Autocommands for "*":0
+332.392  000.003  000.003: sourcing nvim_exec2() called at BufReadPost Autocommands for "*":0
+332.407  000.002  000.002: sourcing nvim_exec2() called at BufReadPost Autocommands for "*":0
+332.976  000.057  000.057: require('todo-comments.util')
+332.989  000.153  000.096: require('todo-comments.config')
+333.131  000.089  000.089: require('todo-comments.highlight')
+333.136  000.145  000.055: require('todo-comments.jump')
+333.139  000.661  000.364: require('todo-comments')
+333.736  000.369  000.369: require('vim.filetype.detect')
+334.891  000.067  000.067: sourcing /opt/nvim-linux-x86_64/share/nvim/runtime/ftplugin/make.vim
+336.008  000.091  000.091: sourcing /opt/nvim-linux-x86_64/share/nvim/runtime/indent/make.vim
+337.812  000.487  000.487: sourcing /opt/nvim-linux-x86_64/share/nvim/runtime/syntax/make.vim
+339.371  000.063  000.063: require('snacks.quickfile')
+341.352  000.440  000.440: sourcing /opt/nvim-linux-x86_64/share/nvim/runtime/syntax/make.vim
+341.709  000.128  000.128: require('snacks.statuscolumn')
+343.060  001.582  001.455: sourcing nvim_exec2() called at BufReadPost Autocommands for "*":0
+343.289  000.221  000.221: require('snacks.indent')
+343.480  000.163  000.163: require('snacks.scope')
+344.353  000.084  000.084: require('snacks.animate')
+344.490  000.092  000.092: require('snacks.animate.easing')
+344.683  000.094  000.094: require('editorconfig')
+344.834  067.108: opening buffers
+344.940  000.092  000.092: require('snacks.explorer')
+345.251  000.326: BufEnter autocommands
+345.258  000.006: editing files in windows
+345.315  000.057: VimEnter autocommands
+345.652  000.291  000.291: require('snacks.dashboard')
+345.910  000.127  000.127: require('snacks.scroll')
+346.287  000.086  000.086: require('vim.ui')
+346.295  000.300  000.214: require('snacks.input')
+346.511  000.104  000.104: require('snacks.picker.config')
+346.847  000.330  000.330: require('snacks.picker.config.highlights')
+347.013  000.161  000.161: require('snacks.picker.config.defaults')
+347.127  000.110  000.110: require('snacks.picker.config.layouts')
+350.409  003.672: UIEnter autocommands
+350.417  000.008: before starting main loop
+351.559  001.142: first screen update
+351.564  000.004: --- NVIM STARTED ---
+

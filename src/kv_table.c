@@ -4,6 +4,8 @@
 #include <stdio.h>
 #include <string.h>
 #define TOMBSTONE ((char *)0x1)
+// for simplicity, the progam will just use the hash table for storing and interracting data. there won't be implementation of B+-Tree yet.
+
 // func: kv_init
 // capacity: size of the allocated slots for the db.
 // returns: return table pointer upon success, otherwise NULL.
@@ -42,7 +44,7 @@ void kv_free(kv_table* table){
 // - capacity: the avaible size of the db.
 // returns: hash of the key with the cap to the size of the capacifty of the db/table.
 size_t hash(char* val, size_t capacity){
-    size_t hash = 0xeffbeeac; 
+    size_t hash = 0x01ebeffbeeac; 
     while(*val){
         hash^= *val;
         hash += *val;
@@ -56,19 +58,21 @@ size_t hash(char* val, size_t capacity){
 // key: the pointer to the key to insert
 // val: the pointer ot the value to insert into the db.
 // returns: the index of the key, otherwise on error -1.
+// note: this applies the open address approach using lienar probing.
 int kv_put(kv_table* table, char* key, char* val){
     if(!table || !key || !val){
         return -1;
-    } 
+    }
     size_t index = hash(key, table->capacity);
-    size_t frist_tombstone_ind = -1;
+    int frist_tombstone_ind = -1;
     for(size_t i =0; i< table->capacity; i++){
-        size_t real_index = (i+index)%table->capacity;
+        size_t real_index = (i+index) % table->capacity;
+        // printf("Entry val pointer, val: %p, %s. \n",table->entry, table->entry->val);
         kv_entry* entries = &table->entry[real_index];
         // if the key is null, create new element.
-        if(!entries->key){
-            // printf("case 1\n");
-            size_t insertIndex = (frist_tombstone_ind !=-1)? frist_tombstone_ind: real_index;
+        if(entries->key == NULL){
+            // printf("case 1: NULL.\n");
+            size_t insertIndex = (frist_tombstone_ind !=-1)? (size_t) frist_tombstone_ind: real_index;
             kv_entry* new = &table->entry[insertIndex];
             char* newKey = strdup(key);
             char* newVal = strdup(val);
@@ -84,22 +88,24 @@ int kv_put(kv_table* table, char* key, char* val){
         }
         // if the key is tombstone, then we set the index and go to next iteration.
         if(entries->key==TOMBSTONE){
-            // printf("case 2\n");
+            // printf("case 2:TOMBSTONE.\n");
             if(frist_tombstone_ind==-1){
                 frist_tombstone_ind=real_index;
             }
             continue;
         }
-        // find the existing matching key, then update
-        if(entries->key && !strcmp(entries->key,key)){
-            // printf("case 3/n");
-            char* newVal = strdup(val);
-            if(!newVal) {
-                free(newVal);
-                return -1;
-            }
-            free(entries->val);
-            entries->val = newVal;
+        // find the existing matching key, then go the next address.
+        if(entries->key && strcmp(entries->key,key)==0){
+            // printf("case 3: found matches.\n");
+            // char* newVal = strdup(val);
+            // if(!newVal) {
+            //     free(newVal);
+            //     return -1;
+            // }
+            // free(entries->val);
+            // entries->val = newVal;
+            printf("Already filled. Going to next one.\n");
+            continue;
         }
     } 
     //if there are all occupied with one tombstone left.
@@ -123,17 +129,21 @@ int kv_put(kv_table* table, char* key, char* val){
 // - table: the pointer to the db.
 // - key: the pointer to the key to lookup to get the value.
 // returns: value if there is a match, and null if otherwise.
-c_string_container* kv_get(kv_table* table, char* key){
-    size_t index = hash(key,table->capacity);
-    int pos = 0;
-    c_string_container* result; 
-    init_c_string_container(result);
-    for(size_t i = 0; i < table->capacity;i++){
-        printf("Iteration: %ld\n",i);
-        size_t real_index = (index+i) % table->capacity; 
-        char* val = table->entry[real_index].val;
-        if(val){
-            add_element_to_c_string_container(result, val, strlen(val));
+c_string_container kv_get(kv_table* table, char* key){
+    c_string_container result;
+    init_c_string_container(&result);
+    // size_t index = hash(key,table->capacity);
+    printf("==========================================\n");
+    for(size_t i = 0;i< table->capacity;i++){
+        size_t real_index = (i)%table->capacity;
+        char* entry_key = table->entry[real_index].key;
+        char* entry_val = table->entry[real_index].val;
+        if(entry_val&&strcmp(entry_key,key)==0){
+            printf("Adding...\n");
+            printf("size of result: %ld\n", result.size);
+            int add_result = add_element_to_c_string_container(&result, entry_val, strlen(entry_val));
+            // printf("adding result is: %d\n", add_result);
+            // printf("Result added: %s", result.arr[result.size-1]);
         }
     }
     return result;
@@ -143,6 +153,6 @@ c_string_container* kv_get(kv_table* table, char* key){
 //- key: pointer to the key value to delete from the db.
 //returns: 0 if success and -1 otehrwise.
 
-// int kv_delete(kv_table*,char* key){
-//
-// }
+int kv_delete(kv_table*,char* key){
+
+}

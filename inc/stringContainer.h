@@ -10,6 +10,6 @@ typedef struct {
 void init_c_string_container(c_string_container *contianer);
 int add_element_to_c_string_container(c_string_container *container, const char* text, size_t text_length);
 void free_c_string_container(c_string_container* container);
-c_string_container substrings(char* input, char* delimeter);
+c_string_container substrings(char* input, const char delimeter);
 
 #endif
