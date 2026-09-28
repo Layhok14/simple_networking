@@ -15,12 +15,12 @@ typedef struct{
     size_t count;
     kv_entry *entry; 
 }kv_table;
-kv_table *kv_init(size_t capacity);
+kv_table* kv_init(size_t capacity);
 void kv_free(kv_table* table);
 void handle_error(int result, const char* var_name);
 int kv_put(kv_table* table, char* key, char* val);
 c_string_container kv_get(kv_table* table,char* key);
 int kv_delete(kv_table*table, char* key);
 int kv_delete(kv_table* table,char* key);
-void rehash_hash_table(kv_table* container);
+void rehash_hash_table(kv_table** container_ref);
 #endif

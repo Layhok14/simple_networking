@@ -3,7 +3,6 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
-#include <errno.h>
 
 #define TOMBSTONE ((char *)0x1)
 
@@ -23,17 +22,16 @@ size_t hash(char* val, size_t capacity){
     return hash % capacity;
 }
 
-// func: check_operation
+// func: handle_error 
 // description: this is to check for error return by the function impllemented in the project.
 // params:
 //      - result: number returns from the functio of adding operation to the data structure.
 // returns: statement of success if it is the success code, and code error with statement if otherwise.
 void handle_error(int result, const char* var_name){
-    if(result ==0){
+    if(result == 0){
         printf("successful operation for var: %s\n",var_name);
     }else{
-        printf("error code: %d for variable: %s\n", errno, var_name);
-        perror("Error\n");
+        printf("Result status code: %d for var: %s.\n", result, var_name);
     }
 }
 // func: kv_init
@@ -42,10 +40,14 @@ void handle_error(int result, const char* var_name){
 // returns: return table pointer upon success, otherwise NULL.
 kv_table* kv_init(size_t capacity){
     kv_table* table = malloc(sizeof(kv_table));
+    if(!table){
+        return NULL;
+    }
     table->capacity = capacity;
     table->count=0;
     table->entry = calloc(capacity,sizeof(kv_entry));
     if(table->entry==NULL){
+        free(table);
         return NULL;
     }
     return table;
@@ -55,20 +57,21 @@ kv_table* kv_init(size_t capacity){
 // description: create a new hash table with a new size and copy all elements in the old hash table to the new one.point to the new hash table and free the old table.
 // params:
 //      - container: the old hash table.
-// returns: new a hash table. 
-void rehash_hash_table(kv_table* container){
-    size_t new_capacity = 2*container->capacity;
-    kv_table* new_table = kv_init(new_capacity);  
+// returns: new a hash table.
+void rehash_hash_table(kv_table** container_ref){
+    kv_table* container = *container_ref;
+    size_t new_capacity = 2 * container->capacity;
+    kv_table* new_table = kv_init(new_capacity);
     for(size_t i = 0; i < container->capacity;i++){
         char* pos_key = container->entry[i].key;
         char* pos_val = container->entry[i].val;
-        int pos_add = kv_put(new_table, pos_key, pos_val);
-        check_operation(pos_add);
+        if(pos_key!=NULL && pos_key!=TOMBSTONE){
+            int pos_add = kv_put(new_table, pos_key, pos_val);
+            check_operation(pos_add);
+        }
     }
     kv_free(container);
-    container = kv_init(new_capacity);
-    container = new_table;
-    // return new_table;
+    *container_ref = new_table;
 }
 
 // function: kv_free
@@ -81,16 +84,30 @@ void kv_free(kv_table* table){
         return; 
     }
     if(table->entry!=NULL){
+        for(size_t i = 0; i< table->capacity;i++){
+            char* key = table->entry[i].key;
+            char* val = table -> entry[i].val;
+            if(key==NULL){
+                continue;
+            }
+            if(val==NULL){
+                continue;
+            }
+            if(key!=NULL && key!=TOMBSTONE){
+                free(key);
+            }
+            if(val!=NULL){
+                free(val);
+            }
+        }
         free(table->entry);
         table->entry=NULL;
-        printf("The table has been freed.\n");
     }else{
         printf("maybe we have to check the data first!\n");
     }
     free(table);
     table=NULL;
-    printf("Look like table is freed now.\n");
-    printf("Now it is outside the checking now.\n");
+    printf("The table has been freed.\n");
 }
 
 // function: kv_put
@@ -102,7 +119,7 @@ void kv_free(kv_table* table){
 // returns: the index of the key, otherwise on error -1.
 int kv_put(kv_table* table, char* key, char* val){
     if(!table || !key || !val){
-        return -1;
+            return -1;
     }
     size_t index = hash(key, table->capacity);
     int frist_tombstone_ind = -1;
@@ -127,8 +144,8 @@ int kv_put(kv_table* table, char* key, char* val){
             table->count++;
             // check if the the size is greater than the laod factor.
             size_t threshold_count = HASH_TABLE_LOAD_FACTOR * table->capacity;
-            if(table->count > threshold_count){
-                rehash_hash_table(table);
+            if(table->count >= threshold_count){
+                rehash_hash_table(&table);
                 printf("rehased the table\n");
                 printf("new capacity of the table: %ld\n", table->capacity);
             }
@@ -184,7 +201,7 @@ c_string_container kv_get(kv_table* table, char* key){
     // size_t index = hash(key,table->capacity);
     printf("==========================================\n");
     for(size_t i = 0;i< table->capacity;i++){
-        size_t real_index = (i)%table->capacity;
+        size_t real_index = i;
         char* entry_key = table->entry[real_index].key;
         char* entry_val = table->entry[real_index].val;
         if(entry_val&&strcmp(entry_key,key)==0){
@@ -203,7 +220,7 @@ c_string_container kv_get(kv_table* table, char* key){
 // params:
 //      - table: pointer to the db.
 //      - key: pointer to the key value to delete from the db.
-// returns: 0 if success and -1 otehrwise.
+// returns: 0 if success and -1 otherwise.
 
 int kv_delete(kv_table* table,char* key){
     size_t index = hash(key,table->capacity);
@@ -219,13 +236,13 @@ int kv_delete(kv_table* table,char* key){
         char* entry_val = entry->val;
         if(strcmp(entry_key,key)==0){
             if(entry_val){
-                free(entry_key); 
-                free(entry_val); 
-                entry_key = TOMBSTONE;  
+                free(entry_key);
+                free(entry_val);
+                entry_key = TOMBSTONE;
                 entry_val = NULL;
                 table->count--;
             }
         }
-    } 
+    }
     return 0;
 }
