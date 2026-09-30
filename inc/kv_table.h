@@ -22,5 +22,5 @@ int kv_put(kv_table* table, char* key, char* val);
 c_string_container kv_get(kv_table* table,char* key);
 int kv_delete(kv_table*table, char* key);
 int kv_delete(kv_table* table,char* key);
-void rehash_hash_table(kv_table** container_ref);
+void rehash_hash_table(kv_table* container_ref);
 #endif

@@ -58,20 +58,27 @@ kv_table* kv_init(size_t capacity){
 // params:
 //      - container: the old hash table.
 // returns: new a hash table.
-void rehash_hash_table(kv_table** container_ref){
-    kv_table* container = *container_ref;
-    size_t new_capacity = 2 * container->capacity;
-    kv_table* new_table = kv_init(new_capacity);
-    for(size_t i = 0; i < container->capacity;i++){
-        char* pos_key = container->entry[i].key;
-        char* pos_val = container->entry[i].val;
+void rehash_hash_table(kv_table* container){
+    size_t old_capacity = container->capacity;
+    size_t new_capacity = 2 * old_capacity;
+    kv_entry* old_entry = container->entry;
+    kv_entry* new_entry = calloc(2*new_capacity, sizeof(kv_entry));
+    if(!new_entry){
+        return;
+    }
+    container->capacity = new_capacity;
+    container->entry = new_entry;
+    container->count = 0;
+    for(size_t i = 0; i < old_capacity;i++){
+        char* pos_key = old_entry[i].key;
+        char* pos_val = old_entry[i].val;
         if(pos_key!=NULL && pos_key!=TOMBSTONE){
-            int pos_add = kv_put(new_table, pos_key, pos_val);
-            check_operation(pos_add);
+            kv_put(container, pos_key,pos_val);
+            free(pos_key);
+            free(pos_val);
         }
     }
-    kv_free(container);
-    *container_ref = new_table;
+    free(old_entry);
 }
 
 // function: kv_free
@@ -145,7 +152,7 @@ int kv_put(kv_table* table, char* key, char* val){
             // check if the the size is greater than the laod factor.
             size_t threshold_count = HASH_TABLE_LOAD_FACTOR * table->capacity;
             if(table->count >= threshold_count){
-                rehash_hash_table(&table);
+                rehash_hash_table(table);
                 printf("rehased the table\n");
                 printf("new capacity of the table: %ld\n", table->capacity);
             }
