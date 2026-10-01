@@ -46,8 +46,7 @@ Run commands at the root of the project.
 - Debug build for algorithm part(Hash Table): <code>make debug_algo</code>
 - Debug build for networking part: <code>make debug_connection</code>
 
-
-#### Executing program.
+### Executing program.
 At the root of the project, run:
 
 1. Executable files for testing:
@@ -57,14 +56,14 @@ At the root of the project, run:
 2. Executable files for debugging:
 - Algorithm(Hash Table): <code>./bin/debug/algo</code>
 - Networking: <code>./bin/debug/algo</code>
-#### Cleanup
+### Cleanup
 To cleanup all executable files, run: 
 <code>make clean</code>
 
 ## 4. Limitations:
 - Lack of documentation for some functions.
 - Maybe there are some bad practices for memory management somewhere.
-
+- [CMakeList.txt](./CmakeLists.txt) is not implemented yet because I have not explored CMake.
 ## 5. Helping out
 Feel free to help out and thank you for doing so. This can be done in different formats such as: 
 - Overcome the limitations listed above.
