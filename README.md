@@ -23,7 +23,7 @@ This phase is not implemented nor planned yet. Further details will be provided 
 ### Prepare compile folder.
 Create a <code>bin/</code> directory at the root of the project for all compilation result to stay in there. The Makefile is built around that.
 
-"""mkdir -p bin"""
+<code>mkdir -p bin</code>
 
 As programs are built in C, you need to perform 2 steps to run the programs: compile and run the executable file(ELF file in Linux).
 
@@ -39,27 +39,27 @@ Result of all compilation will be store inside <code>bin/</code> directory.
 Run commands at the root of the project.
 
 1. Compiling for testing: 
-- Testing build for algorithm part(Hash Table): """make test_algo"""
-- Testing build for networking part: """make test_connection"""
+- Testing build for algorithm part(Hash Table): <code>make test_algo</code>
+- Testing build for networking part: <code>make test_connection</code>
 
 2. Compiling for debugging: 
-- Debug build for algorithm part(Hash Table): """make debug_algo"""
-- Debug build for networking part: """make debug_connection"""
+- Debug build for algorithm part(Hash Table): <code>make debug_algo</code>
+- Debug build for networking part: <code>make debug_connection</code>
 
 
 #### Executing program.
 At the root of the project, run:
 
 1. Executable files for testing:
-- Algorithm(Hash Table): """./bin/test/algo"""
-- Networking: """./bin/test/network/"""
+- Algorithm(Hash Table): <code>./bin/test/algo</code>
+- Networking: <code>./bin/test/network/</code>
 
 2. Executable files for debugging:
-- Algorithm(Hash Table): """./bin/debug/algo"""
-- Networking: """./bin/debug/algo"""
+- Algorithm(Hash Table): <code>./bin/debug/algo</code>
+- Networking: <code>./bin/debug/algo</code>
 #### Cleanup
 To cleanup all executable files, run: 
-"""make clean"""
+<code>make clean</code>
 
 ## 4. Limitations:
 - Lack of documentation for some functions.
