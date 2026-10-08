@@ -1,7 +1,6 @@
 #include <sys/socket.h>
+#include <sys/select.h>
 #include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
 #include <unistd.h>
 #include <arpa/inet.h>
 #include <netinet/in.h>
@@ -10,7 +9,6 @@
 void handle_server(int socket_fd){
     char buffer[4096] = {0};
     proto_type_header_e* header = (proto_type_header_e *) buffer;
-    
     // Read packet from server
     ssize_t bytes_read = read(socket_fd, header, sizeof(proto_type_header_e) + sizeof(int));
     if (bytes_read <= 0) {
@@ -29,7 +27,7 @@ void handle_server(int socket_fd){
     if (recv_type != PROTO_HELLO || recv_data != 1) {
         printf("Mismatch protocols\n");
         return;
-    } 
+    }
 
     printf("Successfully connected to the server! Data received: %d\n", recv_data);
 }

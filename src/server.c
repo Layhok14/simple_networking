@@ -1,3 +1,4 @@
+#include <bits/types/struct_timeval.h>
 #include <stddef.h>
 #include <sys/socket.h>
 #include <stdio.h>
@@ -7,6 +8,7 @@
 #include <arpa/inet.h>
 #include <netinet/in.h>
 #include "socket.h"
+
 void handle_client(int socket_fd){
     char buffer[4096]  = {0};
     proto_type_header_e* header = (proto_type_header_e *) &buffer;
@@ -24,7 +26,7 @@ int start_server(char* address){
     struct sockaddr_in server_info = {0};
     struct sockaddr_in client_info = {0};
     int client_size = 0;
-    server_info.sin_family  = AF_INET;
+    server_info.sin_family = AF_INET;
     server_info.sin_port = htons(PORT);
     server_info.sin_addr.s_addr = inet_addr(address);
     int server_socket = socket(AF_INET ,SOCK_STREAM,0);
@@ -45,17 +47,17 @@ int start_server(char* address){
     }
     while(1){
         //accept
-        int cfd = accept(server_socket,(struct sockaddr *) &client_info, (socklen_t *)&client_size);
-        if(cfd==-1){
+        int client_socket = accept(server_socket,(struct sockaddr *) &client_info, (socklen_t *)&client_size);
+        if(client_socket==-1){
             perror("accept");
             close(server_socket);
             return -1;
         }
-        handle_client(cfd);
     }
     close(server_socket);
     return 0;
 }
+
 int main(int argc, char* argv[]){
     if(argc!=2){
         printf("usage: <ip4 address>: %s\n", argv[0]);
