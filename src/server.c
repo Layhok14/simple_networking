@@ -27,7 +27,7 @@ int start_server(char* address){
     struct sockaddr_in client_info = {0};
     int client_size = 0;
     server_info.sin_family = AF_INET;
-    server_info.sin_port = htons(PORT);
+    server_info.sin_port = htons(SERVER_PORT);
     server_info.sin_addr.s_addr = inet_addr(address);
     int server_socket = socket(AF_INET ,SOCK_STREAM,0);
     if(server_socket==-1){

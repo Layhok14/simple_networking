@@ -35,6 +35,7 @@ test_connection:
 	mkdir -p $(NETWORK_TEST_DIR)
 	gcc -o $(NETWORK_TEST_DIR)/client src/client.c -I./inc $(BUILD_FLAGS)
 	gcc -o $(NETWORK_TEST_DIR)/server src/server.c -I./inc $(BUILD_FLAGS)
+	gcc -o $(NETWORK_TEST_DIR) src/select.c -I./inc $(BUILD_FLAGS)
 
 debug_connection:
 	mkdir -p $(NETWORK_DEBUG_DIR)

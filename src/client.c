@@ -40,7 +40,7 @@ int main(int argc, char* argv[]){
     }
     struct sockaddr_in client_info = {0};
     client_info.sin_family  = AF_INET;
-    client_info.sin_port = htons(PORT);
+    client_info.sin_port = htons(SERVER_PORT);
     client_info.sin_addr.s_addr = inet_addr(argv[1]);
     int client_socket = socket(AF_INET ,SOCK_STREAM,0);
     if(client_socket == -1){
