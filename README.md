@@ -18,8 +18,7 @@ This phase is not implemented nor planned yet. Further details will be provided 
 ### Prerequisites: 
 - [Make](https://shellrag.com/tutorials/makefile/installation): Pre-installed on Linux and Mac.
 - [C](https://installc.org/)
-- [GNU Debugger](https://sourceware.org/gdb/download/)
-
+- [Raddebugger](https://github.com/EpicGames/raddebugger.git)(Recommended)/[GNU Debugger](https://sourceware.org/gdb/download/)
 ### Prepare compile folder.
 Create a <code>bin/</code> directory at the root of the project for all compilation result to stay in there. The Makefile is built around that.
 
